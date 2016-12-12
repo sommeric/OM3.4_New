@@ -4,6 +4,6 @@ Ops Manager 3.4, released at the beginning of December, contains both new featur
 
 ## Deployment page
 
-Ops Manager 3.4 has a redesigned deployment page.  Items that previously appeared in the inner left-hand navigation bar now appear in as tabs.  They include servers and agents.  Security settings also now appear under a separate tab.  The settings include authentication & users, and authorization & roles.  The toplogy and list views are now accessed via buttons.  Additional functions are accessible under more: host mappings, version manager, and logs.
+Ops Manager 3.4 has a redesigned deployment page.  Items that previously appeared in the inner left-hand navigation bar now appear in as tabs.  They include *Servers* and *Agents*.  *Security* settings also now appear under a separate tab.  The settings include *USERS*, *ROLES* and *Authorization & TSL/SSL Settings*.  The *TOPOLOGY* and *LIST* views are now accessed via buttons.  Additional functions are accessible under *More*: *Host Mappings*, *Version Manager*, and *Logs*.
 
 <img src="https://github.com/sommeric/OM3.4_New/blob/master/Deployment-Walkthrough.gif" width="1200" />
