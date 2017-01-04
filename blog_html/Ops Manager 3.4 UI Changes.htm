@@ -8,7 +8,7 @@
 	
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:300,400,700'>
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css">
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/blog_html/css/style.css">
+	<link rel="stylesheet" href="http://rawgit.com/sommeric/OM3.4_New/master/blog_html/css/style.css">
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,6 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 		var showGif = function(elem) {
-			debugger;
 			$("#popupImage").attr('src',elem[0].children[0].attributes['data-alt'].value);
 			$("#popupTitle").text(elem[0].children[1].innerText);
 
@@ -32,53 +31,97 @@
 	</header>
 
 	<div class="demo-content cf">
+		<h1>Ops Manager 3.4 User Interface Changes</h1>
+		Ops Manager 3.4, released at the beginning of December, contains both new feature and changes from the previous major release, 2.0.  This blog post will focus on the new Ops Manager 3.4 UI.  It will cover new features and highlight changes from the previous UI.
+		<h2>&nbsp;</h2>
+		<h2>Deployment page</h2>
+		Ops Manager 3.4 has a redesigned deployment page.  Items that previously appeared in the inner left-hand navigation bar now appear as tabs.  Joining the existing tab for <i>Processes</i> are tabs for <i>Servers</i> and <i>Agents</i>.  Security settings also now appear under a separate <i>Security</i> tab.  These include <i>USERS</i>, <i>ROLES</i> and <i>AUTHORIZATION &amp; TSL/SSL SETTINGS</i>.  The <i>TOPOLOGY</i> and <i>LIST</i> views are now accessed via buttons.  Additional functions are accessible under <i>More</i>: <i>Host Mappings</i>, <i>Version Manager</i>, and <i>Logs</i>.
 		<figure style="width: 100%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/Deployment-Walkthrough.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/Deployment-Walkthrough.gif?raw=true">
-			<figcaption>Ops Manager 3.4 Deployment Walktrough</figcaption>
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/Deployment-Walkthrough.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/Deployment-Walkthrough.gif?raw=true"></a>
+			<figcaption>Ops Manager Deployment Page 3.4 </figcaption>
 		</figure>
+		<h2>&nbsp;</h2>
+		<h2>Alerts tab</h2>
+		<table>
+			<tr>
+				<td style="width: 50%;">
+					Ops Manager 2.0 featured dedicated icons on the top of page showing the health of the agents.
+				</td>
+				<td style="width: 50%;">
+					In Ops Manager 3.4, agent health is reported via alerts.  These alerts function identically to all other alerts and appear in the <i>Alerts</i> tab.  Agent alerts are active by default.
+				</td>
+			</tr>
+		</table>
 		<figure style="width: 50%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/AlertsHeader_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/AlertsHeader_2.0.gif?raw=true">
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/AlertsHeader_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/AlertsHeader_2.0.gif?raw=true"></a>
 			<figcaption>Ops Manager Alerts 2.0</figcaption>
 		</figure>
 		<figure style="width: 50%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/AlertsHeader_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/AlertsHeader_3.4.gif?raw=true">
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/AlertsHeader_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/AlertsHeader_3.4.gif?raw=true"></a>
 			<figcaption>Ops Manager Alerts 3.4</figcaption>
 		</figure>
+		<h2>&nbsp;</h2>
+		<h2>Metrics</h2>
+		<table>
+			<tr>
+				<td style="width: 50%;">
+					In Ops Manager 2.0, metric chart zoom and granularity are set via buttons.  &quot;Last Ping&quot; information is accessed via the ellipsis button.
+				</td>
+				<td style="width: 50%;">
+					In Ops Manager 3.4, zoom and granularity were changed to drop-down menus, and an additional 10-second granularity setting was added for improved resolution.  &quot;Last Ping&quot; information is now listed under <i>More</i>.  For HW metrics, use of munin-node is no longer required.  HW metrics are automatically gathered for automated deployments.
+				</td>
+			</tr>
+		</table>
 		<figure style="width: 51%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/MetricsDashboard_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/MetricsDashboard_2.0.gif?raw=true">
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/MetricsDashboard_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/MetricsDashboard_2.0.gif?raw=true"></a>
 			<figcaption>Ops Manager Metrics 2.0</figcaption>
 		</figure>
 		<figure style="width: 49%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/MetricsDashboard_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/MetricsDashboard_3.4.gif?raw=true">
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/MetricsDashboard_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/MetricsDashboard_3.4.gif?raw=true"></a>
 			<figcaption>Ops Manager Metrics 3.4</figcaption>
 		</figure>
+		<h2>&nbsp;</h2>
+		<h2>Documentation and Support</h2>
+		<table>
+			<tr>
+				<td style="width: 50%;">
+					For Ops Manager 2.0, documentation and support were accessed via icons in the top-right corner of the page.
+				</td>
+				<td style="width: 50%;">
+					In Ops Manager 3.4, those are accessed via buttons at the bottom of the left-hand navigation bar.
+				</td>
+			</tr>
+		</table>
 		<figure style="width: 50%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/TabDocsSupport_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/TabDocsSupport_2.0.gif?raw=true">
-			<figcaption>Ops Manager Docs & Support 2.0</figcaption>
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/TabDocsSupport_2.0.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/TabDocsSupport_2.0.gif?raw=true"></a>
+			<figcaption>Ops Manager 2.0 Docs and Support</figcaption>
 		</figure>
 		<figure style="width: 50%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/TabDocsSupport_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/TabDocsSupport_3.4.gif?raw=true">
-			<figcaption>Ops Manager Docs & Support 3.4</figcaption>
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/TabDocsSupport_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/TabDocsSupport_3.4.gif?raw=true"></a>
+			<figcaption>Ops Manager 3.4 Docs and Support</figcaption>
 		</figure>
+		<h2>&nbsp;</h2>
+		<h2>Admin Page</h2>
+		For Ops Manager 3.4, existing functionality on the <i>Admin</i> page remains identical to version 2.0.  This page is also the location for accessing two new features: S3 blockstore configuration for backups (under the existing <i>Backup</i> button) and server pool administration (under the new <i>Server Pool</i> button). For more details on these fatures, see the Ops Manager documentation.
 		<figure style="width: 100%;">
 			<a href="#myPopup" data-rel="popup" data-position-to="window" onclick="showGif($(this));">
-			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/NewAdminFeatures_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/NewAdminFeatures_3.4.gif?raw=true">
+			<img src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/NewAdminFeatures_3.4.png"  alt="Static Image" data-alt="https://github.com/sommeric/OM3.4_New/blob/master/NewAdminFeatures_3.4.gif?raw=true"></a>
 			<figcaption>Ops Manager 3.4 Admin page</figcaption>
 		</figure>
+		<h2>&nbsp;</h2>
 	</div>
 
-<div data-role="popup" id="myPopup">
-	  <p id="popupTitle">placeholder text</p>
+	<div data-role="popup" id="myPopup">
+	  <!-- p id="popupTitle">Animated gif...</p-->
       <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img id="popupImage" src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/PNG/NewAdminFeatures_3.4.png" style="width:70%;height:70%;" alt="Skaret View">
     </div>
-	<script src="https://raw.githubusercontent.com/sommeric/OM3.4_New/master/blog_html/js/script.js"></script>
 
 </body>
 </html>
