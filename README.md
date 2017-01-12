@@ -17,7 +17,7 @@ In Ops Manager 3.4, agent health is reported via alerts. These alerts function i
 
 In Ops Manager 2.0, the alert types (OPEN ALERTS, CLOSED ALERTS, ALL ACTIVITY) are selected using buttons.  The alert settings page is accessed via the ellipsis button in the upper right-hand corner of the page.   The settings page contains the ADD button, via which new alerts are created.
 
-In Ops Manager 3.4, the alert types have become tabs.  In addition to the 3 alert types, a fourth tab, Alert Settings, has been added for the alert settings.  The ADD button is now on the main alerts page, right above the tabs.
+In Ops Manager 3.4, the alert types have become tabs.  In addition to the 3 alert types, alert settings have been moved to a fourth tab, Alert Settings.  The ADD button is now on the main alerts page, right above the tabs.
 
 
 ## Metrics
