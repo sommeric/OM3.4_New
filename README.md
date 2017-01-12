@@ -17,7 +17,7 @@ In Ops Manager 3.4, agent health is reported via alerts. These alerts function i
 
 In Ops Manager 2.0, metric chart zoom and granularity are set via buttons. "Last Ping" information is accessed via the ellipsis button.
 
-In Ops Manager 3.4, zoom and granularity were changed to drop-down menus, and an additional 10-second granularity setting was added for improved resolution. "Last Ping" information is now listed under More. For HW metrics, use of munin-node is no longer required. HW metrics are automatically gathered for automated deployments.
+In Ops Manager 3.4, zoom and granularity were changed to drop-down menus, and an additional 10-second granularity setting was added for improved resolution. The granularity drop-down also has a new 'auto' setting which chooses the optimum granularity based on the display period.  "Last Ping" information is now listed under More. For HW metrics, use of munin-node is no longer required. HW metrics are automatically gathered for automated deployments.
 
 ## Documentation and Support
 
